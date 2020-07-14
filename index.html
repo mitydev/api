@@ -6,35 +6,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API - Tr1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
+    <style>
+        .body-hor{
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
     <div class="grid-container" id="app">
+        <div></div>
         <form id="form" method="post" action="">
+            <h1>Dados</h1>
             <label for="cliente">
-                <h3>Cliente:</h3>
-                <input required id="cliente" name="cliente" type="text">
+                <h3>Nome fantasia:</h3>
+                <input  id="fantasy_name" name="fantasy_name" type="text">
             </label>
             <label for="">
-                <h3>Banco de dados:</h3>
-                <input required type="text" id="database" name="database">
+                <h3>Razão social:</h3>
+                <input  type="text" id="company_name" name="company_name">
             </label>
             <label for="">
-                <h3>Email:</h3>
-                <input required type="text" name="email" id="email">
+                <h3>Título:</h3>
+                <input  type="text" name="title" id="title">
             </label>
+            <label for="">
+                <h3>Domínio:</h3>
+                <input  type="text" name="domain" id="domain">
+            </label>
+            <label for="">
+                <h3>Whatsapp:</h3>
+                <input  type="text" name="whatsapp" id="whatsapp">
+            </label>
+            <label for="">
+                <h3>Facebook:</h3>
+                <input  type="text" id="facebook" name="facebook">
+            </label>
+            <label for="">
+                <h3>Instagram:</h3>
+                <input  type="text" id="instagram" name="instagram">
+            </label>
+            <h1>Endereços</h1>
+            <label for="">
+                <h3>Logradouro:</h3>
+                <input  type="text" id="street_address" name="street_address">
+            </label>
+            <label for="">
+                <h3>Numero:</h3>
+                <input  type="text" id="number" name="number">
+            </label>
+            <label for="">
+                <h3>Cidade:</h3>
+                <input  type="text" id="city" name="city">
+            </label>
+            <label for="">
+                <h3>Estado:</h3>
+                <input  type="text" id="state" name="state">
+            </label>
+            <label for="">
+                <h3>País:</h3>
+                <input  type="text" id="district" name="district">
+            </label>
+            <label for="">
+                <h3>Bairro:</h3>
+                <input  type="text" id="district" name="district">
+            </label>
+            <h1>Contato</h1>
             <label for="">
                 <h3>Telefone:</h3>
-                <input required type="text" name="telefone" id="telefone">
+                <input  type="text" id="phone" name="phone">
             </label>
-            <label for="">
-                <h3>Login:</h3>
-                <input required type="text" name="login" id="login">
-            </label>
-            <label for="">
-                <h3>Senha:</h3>
-                <input required id="pass" type="text" id="pass" name="pass">
-            </label>
+            <h1>Trabalho semanal</h1>
+            <div class="grid-x body-hor">
+                <div class="cell large-4">
+                    <h3>Segunda</h3>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+                <div class="cell large-4">
+                    <h3>Terça</h3>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+                <div class="cell large-4">
+                    <h3>Quarta</h3>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+                <div class="cell large-4">
+                    <h3>Quinta</h3>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+                <div class="cell large-4">
+                    <h3>Sexta</h3>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+                <div class="cell large-4">
+                    <h3>Sabado</h3>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+                <div class="cell large-4">
+                    <h3>Domingo</h3>
+                    <div class="grid-x">
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                        <div class="cell large-6">
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
             <div style="width: 300px; justify-content: space-between;" class="grid-x">
                 <label for="catalogo">
                     <input type="radio" id="catalogo" name="type" value="1">
@@ -45,7 +168,7 @@
                     Imobiliária
                 </label>
                 <label for="institucional">
-                    <input type="radio" name="type" id="institucional" value="3">
+                    <input type="radio" name="type" id="" value="3">
                     Institucional
                 </label>
             </div>
@@ -61,9 +184,11 @@
         e.preventDefault();
         formdata = new FormData($(this)[0]);
         $.ajax({
-            url: 'http://192.168.1.8:8080/tr1/23123',
+            url: 'http://localhost:3000/delivery/create',
             method: 'post',
-            data: formdata,
+            data: {
+                teste: 'ola'
+            },
             processData: false,
             contentType: false,
             success: function (data) {
