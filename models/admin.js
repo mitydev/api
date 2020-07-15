@@ -2,7 +2,7 @@
  const bcrypt = require('bcryptjs');
 
 const adminSchema = mongoose.Schema({
-    name: {
+    title: {
         type: String,
         require: true
     },
@@ -30,10 +30,6 @@ const adminSchema = mongoose.Schema({
         type: String,
         require: true,
     },
-    acessToken : {
-        type: String
-    }
-    ,
     createdAt : {
         type: Date,
         default: Date.now
@@ -43,7 +39,6 @@ const adminSchema = mongoose.Schema({
 adminSchema.pre('save' , async function(next)  {
     var hash = await bcrypt.hash(this.password, 10);
     this.password = hash;
-    this.acessToken = uuid();
     next();
 
 });

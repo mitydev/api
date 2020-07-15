@@ -2,34 +2,77 @@ const mongoose = require ('mongoose');
 const bcrypt = require('bcryptjs');
 
 const newUserAdmin = mongoose.Schema({
-   name: {
+   fantasy_name: {
        type: String,
-       require: true
+       require: true, 
+       default: ''
    },
    title: {
        type:String,
+       require: true,
        defaut: ''
+   },
+   company_name: {
+       type:String, 
+       require: true,
+       default: ''
    },
    url: {
        type: String,
        require: true, 
        lowercase: true
    },
+   whatsapp: {
+       type: String,
+       require: true,
+       default: ''
+   },
+   facebook: {
+       type:String,
+       require: true,
+       default: ''
+   },
+   instagram: {
+       type: String,
+       require: true,
+       default: ''
+   },
+   street_address: {
+        type: String,
+        require: true,
+        default: ''
+   },
+   number: {
+       type: Number,
+       require: true,
+       default: 0
+   },
+   city: {
+       type:String,
+       require: true,
+       default: ''
+   },
+   state: {
+       type:String,
+       require: true,
+       default: ''
+   },
+   country: {
+       type: String,
+       require: true,
+       default: 'Brazil'
+   },
+   district: {
+       type: String,
+       require: true,
+       default:'',
+   },
+
    email: {
        type: String, 
        require: true,
-       lowercase: true
-   },
-   login: {
-       type:String,
-       require: true,
-       lowercase: true,
-       select: false
-   },
-   password: {
-       type: String,
-       require: true,
-       select: false
+       lowercase: true, 
+       default: ''
    },
    token_write : {
         type: String,
@@ -40,6 +83,11 @@ const newUserAdmin = mongoose.Schema({
    database: {
        type: String,
        require: true,
+   },
+   work_hour: {
+       type: Object,
+       require: true,
+       default: {}
    },
    createdAt : {
        type: Date,

@@ -7,7 +7,7 @@
     <title>API - Tr1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
     <style>
-        .body-hor{
+        .body-hor {
             text-align: center;
         }
     </style>
@@ -16,65 +16,77 @@
 <body>
     <div class="grid-container" id="app">
         <div></div>
-        <form id="form" method="post" action="">
+        <form id="form" method="post" enctype="application/x-www-form-urlencoded" action="http://localhost:3000/delivery/create">
             <h1>Dados</h1>
             <label for="cliente">
                 <h3>Nome fantasia:</h3>
-                <input  id="fantasy_name" name="fantasy_name" type="text">
+                <input id="fantasy_name" name="fantasy_name" type="text">
+            </label>
+            <label for="cliente">
+                <h3>DataBase:</h3>
+                <input id="database" name="database" type="text">
             </label>
             <label for="">
                 <h3>Razão social:</h3>
-                <input  type="text" id="company_name" name="company_name">
+                <input type="text" id="company_name" name="company_name">
             </label>
             <label for="">
                 <h3>Título:</h3>
-                <input  type="text" name="title" id="title">
+                <input type="text" name="title" id="title">
             </label>
             <label for="">
                 <h3>Domínio:</h3>
-                <input  type="text" name="domain" id="domain">
+                <input type="text" name="domain" id="domain">
             </label>
             <label for="">
                 <h3>Whatsapp:</h3>
-                <input  type="text" name="whatsapp" id="whatsapp">
+                <input type="text" name="whatsapp" id="whatsapp">
             </label>
             <label for="">
                 <h3>Facebook:</h3>
-                <input  type="text" id="facebook" name="facebook">
+                <input type="text" id="facebook" name="facebook">
             </label>
             <label for="">
                 <h3>Instagram:</h3>
-                <input  type="text" id="instagram" name="instagram">
+                <input type="text" id="instagram" name="instagram">
             </label>
             <h1>Endereços</h1>
             <label for="">
                 <h3>Logradouro:</h3>
-                <input  type="text" id="street_address" name="street_address">
+                <input type="text" id="street_address" name="street_address">
             </label>
             <label for="">
                 <h3>Numero:</h3>
-                <input  type="text" id="number" name="number">
+                <input type="text" id="number" name="number">
             </label>
             <label for="">
                 <h3>Cidade:</h3>
-                <input  type="text" id="city" name="city">
+                <input type="text" id="city" name="city">
             </label>
             <label for="">
                 <h3>Estado:</h3>
-                <input  type="text" id="state" name="state">
+                <input type="text" id="state" name="state">
             </label>
             <label for="">
                 <h3>País:</h3>
-                <input  type="text" id="district" name="district">
+                <input type="text" id="country" name="country">
             </label>
             <label for="">
                 <h3>Bairro:</h3>
-                <input  type="text" id="district" name="district">
+                <input type="text" id="district" name="district">
             </label>
             <h1>Contato</h1>
             <label for="">
                 <h3>Telefone:</h3>
-                <input  type="text" id="phone" name="phone">
+                <input type="text" id="phone" name="phone">
+            </label>
+            <label for="">
+                <h3>Login:</h3>
+                <input type="text" id="login" name="login">
+            </label>
+            <label for="">
+                <h3>Senha:</h3>
+                <input type="text" id="password" name="password">
             </label>
             <h1>Trabalho semanal</h1>
             <div class="grid-x body-hor">
@@ -82,10 +94,10 @@
                     <h3>Segunda</h3>
                     <div class="grid-x">
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="seg[]" type="time">
                         </div>
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="seg[]" type="time">
                         </div>
                     </div>
                 </div>
@@ -93,10 +105,10 @@
                     <h3>Terça</h3>
                     <div class="grid-x">
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="ter[]" type="time">
                         </div>
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="ter[]" type="time">
                         </div>
                     </div>
                 </div>
@@ -104,10 +116,10 @@
                     <h3>Quarta</h3>
                     <div class="grid-x">
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="quar[]" type="time">
                         </div>
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="quar[]" id="hora2" type="time">
                         </div>
                     </div>
                 </div>
@@ -115,10 +127,10 @@
                     <h3>Quinta</h3>
                     <div class="grid-x">
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="quin[]" type="time">
                         </div>
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="quin[]" type="time">
                         </div>
                     </div>
                 </div>
@@ -126,10 +138,10 @@
                     <h3>Sexta</h3>
                     <div class="grid-x">
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="sex[]" type="time">
                         </div>
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="sex[]" type="time">
                         </div>
                     </div>
                 </div>
@@ -137,10 +149,10 @@
                     <h3>Sabado</h3>
                     <div class="grid-x">
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="sab[]" type="time">
                         </div>
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="sab[]" type="time">
                         </div>
                     </div>
                 </div>
@@ -148,15 +160,13 @@
                     <h3>Domingo</h3>
                     <div class="grid-x">
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="dom[]" type="time">
                         </div>
                         <div class="cell large-6">
-                            <input type="time">
+                            <input name="dom[]" type="time">
                         </div>
                     </div>
                 </div>
-
-
             </div>
             <div style="width: 300px; justify-content: space-between;" class="grid-x">
                 <label for="catalogo">
@@ -182,19 +192,18 @@
 <script>
     $("#form").submit(function (e) {
         e.preventDefault();
-        formdata = new FormData($(this)[0]);
+        let form = $(this)[0];
+        let url = $(this).attr('action');
+        let formdata = new FormData(form);
+        console.log(formdata);
         $.ajax({
-            url: 'http://localhost:3000/delivery/create',
+            url: url,
             method: 'post',
-            data: {
-                teste: 'ola'
-            },
-            processData: false,
-            contentType: false,
+            data: $(this).serialize(),
             success: function (data) {
                 console.log(data);
-            }
-        })
+            },
+        });
     })
     $("#encrypt").on('click', function () {
         $("#pass").val(generatePass(8));
